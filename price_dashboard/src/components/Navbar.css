@@ -1,0 +1,145 @@
+/* Navbar.css
+ *
+ * Styles for the top navigation bar, link layout, animated dropdown,
+ * and dark mode toggle switch.
+ */
+
+/* ------------------------------------------ */
+/* 🔷 Navbar Layout                          */
+/* ------------------------------------------ */
+.navbar {
+  background-color: #4e73df;
+  padding: 1rem 0;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.navbar-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 2rem; /* adds horizontal margin inside container */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ------------------------------------------ */
+/* 🔗 Branding & Navigation Links            */
+/* ------------------------------------------ */
+.nav-brand {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem; /* spacing between links */
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: opacity 0.2s ease;
+}
+
+.nav-links a:hover {
+  opacity: 0.85;
+}
+
+/* ------------------------------------------ */
+/* ⚙️ Dropdown Menu                         */
+/* ------------------------------------------ */
+.dropdown-menu {
+  position: absolute;
+  top: 2.5rem;
+  right: 0;
+  background: var(--card-bg);
+  color: var(--text-color);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  border-radius: 6px;
+  padding: 1rem;
+  z-index: 999;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  opacity: 0;
+  transform: scale(0.95);
+  transform-origin: top right;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  pointer-events: none;
+}
+
+.dropdown-menu.show {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+}
+
+.dropdown-menu button {
+  background-color: var(--nav-bg);
+  border: none;
+  color: var(--nav-text);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.dropdown-menu button:hover {
+  background-color: #556080;
+}
+
+/* ------------------------------------------ */
+/* 🌙 Toggle Theme Switch                   */
+/* ------------------------------------------ */
+.toggle-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.toggle-container input {
+  display: none;
+}
+
+.toggle-slider {
+  width: 40px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 20px;
+  position: relative;
+  transition: background-color 0.3s;
+}
+
+.toggle-slider::before {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 2px;
+  left: 2px;
+  background: white;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+.toggle-container input:checked + .toggle-slider {
+  background-color: #4e73df;
+}
+
+.toggle-container input:checked + .toggle-slider::before {
+  transform: translateX(20px);
+}
+
+.toggle-label {
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
