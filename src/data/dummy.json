@@ -1,0 +1,15 @@
+[
+    { "date": "2023-01-01", "close": 150, "ticker": "AAPL" },
+    { "date": "2023-02-01", "close": 160, "ticker": "AAPL" },
+    { "date": "2023-03-01", "close": 170, "ticker": "AAPL" },
+    { "date": "2023-04-01", "close": 100, "ticker": "MSFT" },
+    { "date": "2023-05-01", "close": 105, "ticker": "MSFT" },
+    { "date": "2023-06-01", "close": 110, "ticker": "MSFT" },
+    { "date": "2023-04-01", "close": 150, "ticker": "AAPL" },
+    { "date": "2023-05-01", "close": 160, "ticker": "AAPL" },
+    { "date": "2023-06-01", "close": 170, "ticker": "AAPL" },
+    { "date": "2023-01-01", "close": 100, "ticker": "MSFT" },
+    { "date": "2023-02-01", "close": 105, "ticker": "MSFT" },
+    { "date": "2023-03-01", "close": 110, "ticker": "MSFT" }
+  ]
+  

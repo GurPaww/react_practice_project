@@ -1,0 +1,46 @@
+/* ValidationModal.css
+ *
+ * Styles for the validation/error modal overlay and content.
+ * Used by ValidationModal.jsx.
+ */
+
+/* Full-screen semi-transparent background */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* dimmed background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* above everything */
+}
+
+/* Modal box container */
+.modal {
+  background-color: white;
+  padding: 1.5rem 2rem;
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+}
+
+/* Close button */
+.modal button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #4e73df;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.modal button:hover {
+  background-color: #2e59d9;
+}
